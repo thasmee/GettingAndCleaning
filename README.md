@@ -3,7 +3,7 @@ Getting And Cleaning Data Course Project
 
 The course project of coursera course of Getting and Cleaning data
 
-In this code the two libraries are used#
+In this code the two libraries are used
 
 1. library(data.table)
 2. library(stringr)
