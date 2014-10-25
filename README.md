@@ -19,21 +19,23 @@ trainy<-read.table("./UCI/train/y_train.txt", header=FALSE, na.strings="NA",stri
 
 trainsub<-read.table("./UCI/train/subject_train.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
 
-
 train<-cbind(trainx,trainy,trainsub)
 
 testx<-read.table("./UCI/test/X_test.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 testy<-read.table("./UCI/test/y_test.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 testsub<-read.table("./UCI/test/subject_test.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 test<-cbind(testx,testy,testsub)
 
-##Merge the train and test tests to create one dataset of 10299 obs. of  563 variables, where the last two variables are activity and subject
+#Merge the train and test tests to create one dataset of 10299 obs. of  563 variables, where the last two variables are activity and subject
 
 data<-rbind(train,test)
 
 #Extracting the mean and standard deviation reated variables.
-Here all the varaibles that represents any average (mean) or standard deviation is extrcted. 
-Thereby 86 variables are identified and extracted from the features.txt including their indexes
+
+Here all the varaibles that represents any average (mean) or standard deviation is extrcted. Thereby 86 variables are identified and extracted from the features.txt including their indexes
 
 #Feature set
 dat2<-read.table("./UCI/features.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
@@ -56,7 +58,8 @@ featIndex<-f[,1]
 This was done using the index created for the featureset (featIndex). 
 
 #3. Uses descriptive activity names to name the activities in the data set
-#Here the original names are used as it is to keep the track of which, just removed non alpha characters that limits R usage of them as column variables
+
+Here the original names are used as it is to keep the track of which, just removed non alpha characters that limits R usage of them as column variables
 
 featNames<-gsub("\\(|\\)|-|\\,","",f[,2])
 
@@ -67,6 +70,7 @@ These featres are mapped to the mean and std data frame column names
 Didnt use any extra package sine the dataframe is not that big, just used double for loop over the number of activites and the subjects. 
 
 The final data frame (subact) contains the averages over the 86 variables for each subject and activity. the subjects and activities are in the final two columns. 
+
 The data frame is written to a file out.txt
 
 
