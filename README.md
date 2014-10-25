@@ -48,6 +48,7 @@ feat1<-dat2[grep("mean", as.character(dat2$Features), ignore.case = TRUE, fixed=
 feat2<-dat2[grep("std", as.character(dat2$Features), ignore.case = TRUE, fixed=FALSE), ]
 #combine
 feat<-rbind(feat1,feat2)
+
 f<-feat[with(feat,order(feat$Index)), ] #Order accoring to the apperence of the variables in the dataset
 
 #Column numbers of the features containing mean and std
