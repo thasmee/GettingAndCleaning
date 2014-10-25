@@ -12,11 +12,13 @@ In this code the two libraries are used
 #Assuming the dataset is uploaded into the working directory, the script in the run_analysis perform:
 
 Read training and test datasets:
- 
 
 trainx<-read.table("./UCI/train/X_train.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 trainy<-read.table("./UCI/train/y_train.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 trainsub<-read.table("./UCI/train/subject_train.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
+
 
 train<-cbind(trainx,trainy,trainsub)
 
