@@ -1,17 +1,17 @@
-GettingAndCleaning
+Getting And Cleaning Data Course Project
 ==================
 
 The course project of coursera course of Getting and Cleaning data
 
-In this code the two libraries
-##libraries
-library(data.table)
-library(stringr)
-are used
+In this code the two libraries are used#
 
-Assuming the dataset is uploaded into the working directory, the script in the run_analysis perform:
+1. library(data.table)
+2. library(stringr)
 
-##Read training and test datasets 
+
+#Assuming the dataset is uploaded into the working directory, the script in the run_analysis perform:
+
+Read training and test datasets:
  
 
 trainx<-read.table("./UCI/train/X_train.txt", header=FALSE, na.strings="NA",stringsAsFactors=FALSE)
