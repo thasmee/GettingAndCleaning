@@ -73,13 +73,21 @@ Didnt use any extra package sine the dataframe is not that big, just used double
 The final data frame (subact) contains the averages over the 86 variables for each subject and activity. the subjects and activities are in the final two columns. 
 
 head(subact[, c(1,2,86,87,88)])
+
   tBodyAccmeanX tBodyAccmeanY angleZgravityMean activity Subjects
+  
 1     0.2773308   -0.01738382       0.068858912        1        1
+
 2     0.2764266   -0.01859492      -0.036889283        1        2
+
 3     0.2755675   -0.01717678       0.117403280        1        3
+
 4     0.2785820   -0.01483995      -0.067517986        1        4
+
 5     0.2778423   -0.01728503       0.020033815        1        5
+
 6     0.2836589   -0.01689542      -0.001303643        1        6
+
 
 
 
